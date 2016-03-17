@@ -97,7 +97,7 @@ module Bootstrap
                 :name => '/tmp/delete',
                 :source => 'delete.erb',
                 :vars => {
-                  :name => new_resource.fqdn
+                  :name => new_resource.fqdn,
                   :knife => {
                     :config => {
                       :file => new_resource.knife_config_file
