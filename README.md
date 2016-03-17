@@ -1,2 +1,4 @@
-# bootstrap-cookbook
-A cookbook for bootstrapping chef clients
+# bootstrap
+
+TODO: Enter the cookbook description here.
+
