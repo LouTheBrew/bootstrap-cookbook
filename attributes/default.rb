@@ -1,3 +1,4 @@
+default[:bootstrap][:happy] = nil
 default[:bootstrap][:hostname] = nil
 default[:bootstrap][:domain] = nil
 default[:set_fqdn] = nil
