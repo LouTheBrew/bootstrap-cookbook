@@ -1,0 +1,33 @@
+{
+  "name": "bootstrap",
+  "description": "bootstraps a node with stuff",
+  "long_description": "bootstraps a node with stuff",
+  "maintainer": "Lou",
+  "maintainer_email": "LouTheBrew@gmail.com",
+  "license": "all_rights",
+  "platforms": {
+  },
+  "dependencies": {
+    "poise": ">= 0.0.0",
+    "hostname": ">= 0.0.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.1.2",
+  "source_url": "",
+  "issues_url": ""
+}
