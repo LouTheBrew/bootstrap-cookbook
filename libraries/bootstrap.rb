@@ -48,6 +48,8 @@ module Bootstrap
           bash cmd[:name] do
             cwd cmd[:dir]
             code <<-EOH
+            touch /tmp/bash.log
+            echo "#{cmd[:string]}">>/tmp/bash.log
             #{cmd[:string]}
             EOH
           end
