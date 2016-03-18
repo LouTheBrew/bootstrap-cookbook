@@ -1,5 +1,4 @@
 bootstrap 'this_node' do
-  knife_pem_str  node[:bootstrap][:knife][:key][:str]
   knife_pem_file  node[:bootstrap][:knife][:key][:file]
   knife_config_file  node[:bootstrap][:knife][:config]
   client_config_file  node[:bootstrap][:client][:config][:file]

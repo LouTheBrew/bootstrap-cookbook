@@ -9,7 +9,6 @@ module Bootstrap
     actions   :go, :download, :delete
     attribute :name, name_attribute: true, kind_of: String
     attribute :fqdn, kind_of: String, required: true
-    attribute :knife_pem_str, kind_of: String, required: true
     attribute :knife_pem_file, kind_of: String, required: true
     attribute :knife_config_file, kind_of: String, required: true
     attribute :client_config_file, kind_of: String, required: true
@@ -72,13 +71,6 @@ module Bootstrap
                 :source => "#{new_resource.validator_file}.erb",
                 :vars => {
                   :key => new_resource.validator_pem_str
-                }
-              },
-              {
-                :name => "#{new_resource.chef_conf_dir}#{new_resource.knife_config_file}",
-                :source => "#{new_resource.knife_config_file}.erb",
-                :vars => {
-                  :key => new_resource.knife_pem_str
                 }
               },
               {
