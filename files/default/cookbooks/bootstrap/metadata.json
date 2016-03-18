@@ -1,9 +1,9 @@
 {
   "name": "bootstrap",
-  "description": "Installs/Configures bootstrap",
-  "long_description": "Installs/Configures bootstrap",
-  "maintainer": "The Authors",
-  "maintainer_email": "you@example.com",
+  "description": "bootstraps a node with stuff",
+  "long_description": "bootstraps a node with stuff",
+  "maintainer": "Lou",
+  "maintainer_email": "LouTheBrew@gmail.com",
   "license": "all_rights",
   "platforms": {
   },
@@ -27,7 +27,7 @@
   },
   "recipes": {
   },
-  "version": "0.1.0",
+  "version": "0.1.2",
   "source_url": "",
   "issues_url": ""
 }
