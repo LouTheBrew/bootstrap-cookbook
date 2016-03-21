@@ -11,6 +11,7 @@ module Bootstrap
     attribute :fqdn, kind_of: String, required: true
     attribute :knife_pem_file, kind_of: String, required: true
     attribute :knife_config_file, kind_of: String, required: true
+    attribute :knife_config_dir, kind_of: String, required: true
     attribute :knife_user, kind_of: String, required: true
     attribute :client_config_file, kind_of: String, required: true
     attribute :client_pem_file, kind_of: String, required: true
