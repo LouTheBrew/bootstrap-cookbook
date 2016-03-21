@@ -74,15 +74,8 @@ module Bootstrap
                 }
               },
               {
-                :name => "#{new_resource.chef_conf_dir}#{new_resource.client_config_file}",
-                :source => "#{new_resource.client_config_file}.erb",
-                :vars => {
-                  :key => new_resource.client_pem_str
-                }
-              },
-              {
-                :name => "#{new_resource.chef_conf_dir}#{new_resource.knife_config_file}",
-                :source => "#{new_resource.client_config_file}.erb",
+                :name => "#{new_resource.chef_conf_dir}#{new_resource.client_pem_file}",
+                :source => "#{new_resource.client_pem_file}.erb",
                 :vars => {
                   :key => new_resource.client_pem_str
                 }

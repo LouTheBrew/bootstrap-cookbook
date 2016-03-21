@@ -1,6 +1,7 @@
-default[:hostname] = nil
-default[:domain] = nil
-default[:set_fqdn] = "#{default[:hostname]}#{default[:domain]}"
+default[:bootstrap][:happy] = nil
+default[:bootstrap][:hostname] = nil
+default[:bootstrap][:domain] = nil
+default[:set_fqdn] = nil
 default[:bootstrap][:server][:url] = nil
 default[:bootstrap][:environment] = nil
 default[:bootstrap][:dir][:conf] = '/etc/chef/'
