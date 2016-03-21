@@ -1,2 +1,4 @@
 #!/bin/bash
-#chef-client -j <%=@context[:json]%> --environment <%=@context[:environment]%>
+touch /tmp/cmd-chef-client.log
+echo "chef-client -j <%=@context[:json]%> --environment <%=@context[:environment]%>" >> /tmp/cmd-chef-client.log
+chef-client -j <%=@context[:json]%> --environment <%=@context[:environment]%>

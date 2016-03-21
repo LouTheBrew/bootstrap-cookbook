@@ -16,5 +16,6 @@ bootstrap 'this_node' do
   chef_server_url  node[:bootstrap][:server][:url]
   chef_environment  node[:bootstrap][:environment]
   run_list  node[:bootstrap][:run_list]
+  fqdn "#{node[:bootstrap][:hostname]}#{node[:bootstrap][:domain]}"
 end
 include_recipe 'hostname'

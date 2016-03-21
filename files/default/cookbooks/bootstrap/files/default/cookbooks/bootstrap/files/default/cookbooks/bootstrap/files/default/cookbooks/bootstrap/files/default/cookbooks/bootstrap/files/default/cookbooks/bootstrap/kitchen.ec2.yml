@@ -29,5 +29,5 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[anaplan_dr::default]
+      - recipe[bootstrap::default]
     attributes:
