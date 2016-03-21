@@ -1,5 +1,5 @@
 file '/tmp/happyhost' do
-  content node[:set_fqdn]
+  content "gobblygook-#{node[:set_fqdn]}"
 end
 #include_recipe 'hostname'
 #bootstrap 'this_node' do
