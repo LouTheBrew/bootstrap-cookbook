@@ -1,6 +1,3 @@
-file '/tmp/happyhost' do
-  content "gobblygook-#{node[:set_fqdn]}"
-end
 include_recipe 'hostname'
 bootstrap 'this_node' do
   knife_pem_file  node[:bootstrap][:knife][:key][:file]
