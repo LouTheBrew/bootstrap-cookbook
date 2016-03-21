@@ -25,7 +25,7 @@ module Bootstrap
     attribute :databag_file, kind_of: String, required: true
     attribute :chef_server_url, kind_of: String, required: true
     attribute :chef_environment, kind_of: String, required: true
-    attribute :run_list, kind_of: String, required: true
+    attribute :run_list, kind_of: Array, required: true
   end
   class Provider < Chef::Provider
     include Poise

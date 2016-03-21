@@ -2,7 +2,7 @@ include_recipe 'hostname'
 bootstrap 'this_node' do
   knife_pem_file  node[:bootstrap][:knife][:key][:file]
   knife_config_file  node[:bootstrap][:knife][:config]
-  knife_config_dir  node[:bootstrap][:knife][:config][:dir]
+  knife_config_dir  node[:bootstrap][:knife][:dir]
   knife_user  node[:bootstrap][:knife][:user]
   client_config_file  node[:bootstrap][:client][:config][:file]
   client_pem_file  node[:bootstrap][:client][:pem][:file]

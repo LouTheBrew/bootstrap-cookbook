@@ -1,3 +1,6 @@
+file '/tmp/happyhost' do
+  content node[:set_fqdn]
+end
 include_recipe 'hostname'
 bootstrap 'this_node' do
   knife_pem_file  node[:bootstrap][:knife][:key][:file]
