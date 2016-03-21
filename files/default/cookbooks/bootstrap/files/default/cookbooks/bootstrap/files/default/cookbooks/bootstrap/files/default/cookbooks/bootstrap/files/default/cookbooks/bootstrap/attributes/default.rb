@@ -1,11 +1,13 @@
 default[:bootstrap][:happy] = nil
 default[:bootstrap][:hostname] = nil
 default[:bootstrap][:domain] = nil
+default[:set_fqdn] = "#{default[:bootstrap][:hostname]}#{default[:bootstrap][:domain]}"
 default[:bootstrap][:server][:url] = nil
 default[:bootstrap][:environment] = nil
 default[:bootstrap][:dir][:conf] = '/etc/chef/'
 default[:bootstrap][:dir][:log] = '/var/log/chef/'
 default[:bootstrap][:knife][:config] = 'knife.rb'
+default[:bootstrap][:knife][:config][:dir] = '/etc/chef/knife/'
 default[:bootstrap][:knife][:user] = nil
 default[:bootstrap][:knife][:key][:file] = 'knife.pem'
 default[:bootstrap][:client][:config][:file] = 'client.rb'

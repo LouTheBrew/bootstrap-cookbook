@@ -11,6 +11,7 @@ module Bootstrap
     attribute :fqdn, kind_of: String, required: true
     attribute :knife_pem_file, kind_of: String, required: true
     attribute :knife_config_file, kind_of: String, required: true
+    attribute :knife_user, kind_of: String, required: true
     attribute :client_config_file, kind_of: String, required: true
     attribute :client_pem_file, kind_of: String, required: true
     attribute :client_pem_str, kind_of: String, required: true
@@ -94,7 +95,7 @@ module Bootstrap
                   :name => new_resource.fqdn,
                   :knife => {
                     :config => {
-                      :file => "#{new_resource.chef_conf_dir}#{new_resource.client_config_file}"
+                      :file => "#{new_resource.chef_conf_dir}#{new_resource.knife_config_file}"
                     }
                   }
                 }
@@ -112,7 +113,7 @@ module Bootstrap
                 :source => "#{new_resource.knife_config_file}.erb",
                 :vars => {
                   :log_location => "#{new_resource.chef_log_dir}#{new_resource.client_log_file}",
-                  :node_name => new_resource.fqdn,
+                  :node_name => new_resource.knife_user,
                   :client_key => "#{new_resource.chef_conf_dir}#{new_resource.client_pem_file}",
                   :chef_server_url => new_resource.chef_server_url,
                   :validation_client_name => new_resource.validator_name,
