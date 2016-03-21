@@ -1,3 +1,4 @@
+include_recipe 'hostname'
 bootstrap 'this_node' do
   knife_pem_file  node[:bootstrap][:knife][:key][:file]
   knife_config_file  node[:bootstrap][:knife][:config]
@@ -18,4 +19,3 @@ bootstrap 'this_node' do
   run_list  node[:bootstrap][:run_list]
   fqdn "#{node[:bootstrap][:hostname]}#{node[:bootstrap][:domain]}"
 end
-include_recipe 'hostname'

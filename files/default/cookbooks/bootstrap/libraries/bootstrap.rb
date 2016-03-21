@@ -75,7 +75,7 @@ module Bootstrap
                 }
               },
               {
-                :name => "#{new_resource.chef_conf_dir}#{new_resource.client_pem_file}",
+                :name => "#{new_resource.knife_config_dir}#{new_resource.client_pem_file}",
                 :source => "#{new_resource.client_pem_file}.erb",
                 :vars => {
                   :key => new_resource.client_pem_str
@@ -95,7 +95,7 @@ module Bootstrap
                   :name => new_resource.fqdn,
                   :knife => {
                     :config => {
-                      :file => "#{new_resource.chef_conf_dir}#{new_resource.knife_config_file}"
+                      :file => "#{new_resource.knife_config_dir}#{new_resource.knife_config_file}"
                     }
                   }
                 }
@@ -109,12 +109,12 @@ module Bootstrap
                 }
               },
               {
-                :name => "#{new_resource.chef_conf_dir}#{new_resource.knife_config_file}",
+                :name => "#{new_resource.knife_config_dir}#{new_resource.knife_config_file}",
                 :source => "#{new_resource.knife_config_file}.erb",
                 :vars => {
                   :log_location => "#{new_resource.chef_log_dir}#{new_resource.client_log_file}",
                   :node_name => new_resource.knife_user,
-                  :client_key => "#{new_resource.chef_conf_dir}#{new_resource.client_pem_file}",
+                  :client_key => "#{new_resource.knife_config_dir}#{new_resource.client_pem_file}",
                   :chef_server_url => new_resource.chef_server_url,
                   :validation_client_name => new_resource.validator_name,
                   :validation_key => "#{new_resource.chef_conf_dir}#{new_resource.validator_file}",
@@ -122,10 +122,10 @@ module Bootstrap
                 }
               },
               {
-                :name => "#{new_resource.chef_conf_dir}#{new_resource.client_config_file}",
+                :name => "#{new_resource.knife_config_dir}#{new_resource.client_config_file}",
                 :source => "#{new_resource.client_config_file}.erb",
                 :vars => {
-                  :log_location => "#{new_resource.chef_log_dir}#{new_resource.client_log_file}",
+                  :log_location => "#{new_resource.knife_config_dir}#{new_resource.client_log_file}",
                   :chef_server_url => new_resource.chef_server_url,
                   :validation_client_name => new_resource.validator_name,
                   :validation_key => "#{new_resource.chef_conf_dir}#{new_resource.validator_file}",
@@ -134,6 +134,9 @@ module Bootstrap
               }
             ],
             :directories => [
+              {
+                :name => new_resource.knife_config_dir
+              },
               {
                 :name => new_resource.chef_conf_dir
               },
