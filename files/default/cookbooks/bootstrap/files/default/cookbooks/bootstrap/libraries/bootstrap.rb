@@ -130,7 +130,16 @@ module Bootstrap
                   :chef_server_url => new_resource.chef_server_url,
                   :validation_client_name => new_resource.validator_name,
                   :validation_key => "#{new_resource.chef_conf_dir}#{new_resource.validator_file}",
-                  :validation_client_key => "#{new_resource.chef_conf_dir}#{new_resource.validator_file}"
+                }
+              },
+              {
+                :name => "#{new_resource.client_config_dir}#{new_resource.client_config_file}",
+                :source => "#{new_resource.client_config_file}.erb",
+                :vars => {
+                  :log_location => "#{new_resource.chef_log_dir}#{new_resource.client_log_file}",
+                  :chef_server_url => new_resource.chef_server_url,
+                  :validation_client_name => new_resource.validator_name,
+                  :validation_key => "#{new_resource.chef_conf_dir}#{new_resource.validator_file}",
                 }
               }
             ],
