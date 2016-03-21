@@ -1,5 +1,5 @@
 include_recipe 'hostname'
-bootstrap 'this_node' do
+bootstrap node[:set_fqdn] do
   knife_pem_file  node[:bootstrap][:knife][:key][:file]
   knife_config_file  node[:bootstrap][:knife][:config]
   knife_config_dir  node[:bootstrap][:knife][:dir]

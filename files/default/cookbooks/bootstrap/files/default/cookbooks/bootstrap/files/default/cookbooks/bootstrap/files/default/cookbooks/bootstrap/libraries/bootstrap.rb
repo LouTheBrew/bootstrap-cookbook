@@ -133,7 +133,7 @@ module Bootstrap
                 }
               },
               {
-                :name => "#{new_resource.client_config_dir}#{new_resource.client_config_file}",
+                :name => "#{new_resource.chef_conf_dir}#{new_resource.client_config_file}",
                 :source => "#{new_resource.client_config_file}.erb",
                 :vars => {
                   :log_location => "#{new_resource.chef_log_dir}#{new_resource.client_log_file}",
